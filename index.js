@@ -39,7 +39,7 @@ class SVG {
         if (!file.endsWith('.svg')) return;
 
         const iconName = file.replace('.svg', '');
-        const icon = (fs.readFileSync(this.options.assets + file) + '');
+        const icon = (fs.readFileSync(path + file) + '');
 
         icons += `'${iconName}': '${icon}',\n\r`;
       });
