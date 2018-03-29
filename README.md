@@ -29,7 +29,7 @@ With VueJs
 
 ```
 Vue.prototype.svg = require('./svg');
-``
+```
 
 Insisde a template tag you can use `v-html` to render out a svg image.
 ```html
