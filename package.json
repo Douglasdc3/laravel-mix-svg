@@ -1,0 +1,28 @@
+{
+  "name": "laravel-mix-svg",
+  "version": "0.1.0",
+  "description": "A laravel mix package to add SVG images to your project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglasdc3/larave-mix-svg.git"
+  },
+  "keywords": [
+    "laravel",
+    "mix",
+    "laravel mix",
+    "svg"
+  ],
+  "author": "Ken Andries",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/douglasdc3/larave-mix-svg/issues"
+  },
+  "homepage": "https://github.com/douglasdc3/larave-mix-svg#readme",
+  "dependencies": {
+    "laravel-mix": "^2.1.11"
+  }
+}
