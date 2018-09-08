@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 let mix = require('laravel-mix');
 let fs = require('fs');
@@ -26,11 +26,11 @@ class SVG {
   register(options) {
     this.options = Object.assign({
       class: '',
-      assets: ['./resources/assets/svg/'],
-      output: './resources/assets/js/svg.js',
+      assets: ['./resources/svg/'],
+      output: './resources/js/svg.js',
     }, options);
   }
-  
+
   boot() {
     let icons = '';
 
@@ -41,7 +41,7 @@ class SVG {
         const iconName = file.replace('.svg', '');
         const icon = (fs.readFileSync(path + file) + '');
 
-        icons += `'${iconName}': '${icon}',\n\r`;
+        icons += `'${iconName}': \`${icon}\`,\n\r`;
       });
     });
 

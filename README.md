@@ -1,6 +1,6 @@
 # Laral Mix SVG
 
-A laravel mix plugin that adds a `svg.js` file to your project. This is the JavaSript counterpart to Adam's Larave Blade SVG composer package.
+A laravel mix plugin that adds a `svg.js` file to your project. This is the JavaSript counterpart to Adam's Laravel Blade SVG composer package.
 
 ## Install
 
@@ -46,7 +46,7 @@ You can give a object to `mix.svg`
 ```javascript
 mix.svg({
   class: 'icon', // Applied to all svg's
-  assets: ['./resources/assets/svg/'], // a list of directories to search svg images
-  output: './resources/assets/js/svg.js', // Where the craeted js file needs to go.
+  assets: ['./resources/svg/'], // a list of directories to search svg images
+  output: './resources/js/svg.js', // Where the craeted js file needs to go.
 })
 ```
