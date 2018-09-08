@@ -4,7 +4,7 @@ let mix = require('laravel-mix');
 let fs = require('fs');
 
 function writeJavascript(file, icons, defaultClass) {
-  fs.writeFileSync('./resources/assets/js/svg.js', `
+  fs.writeFileSync(file, `
     const icons = {
       ${icons}
     }
