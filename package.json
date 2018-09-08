@@ -1,6 +1,6 @@
 {
   "name": "laravel-mix-svg",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A laravel mix package to add SVG images to your project.",
   "main": "index.js",
   "scripts": {
