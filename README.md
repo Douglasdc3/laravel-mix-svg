@@ -8,6 +8,11 @@ A laravel mix plugin that adds a `svg.js` file to your project. This is the Java
 npm install --save-dev laravel-mix-svg
 ```
 
+Add the following to the top of your `webpack.mix.js` file
+```javascript
+require('laravel-mix-svg');
+```
+
 Add the following to your `webpack.mix.js` file
 ```javascript
 mix.svg();
