@@ -1,6 +1,6 @@
 {
   "name": "laravel-mix-svg",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "A laravel mix package to add SVG images to your project.",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "url": "https://github.com/douglasdc3/larave-mix-svg/issues"
   },
   "homepage": "https://github.com/douglasdc3/larave-mix-svg#readme",
-  "dependencies": {
-    "laravel-mix": "^2.1.11"
+  "peerDependencies": {
+    "laravel-mix": "^4.0.0"
   }
 }
