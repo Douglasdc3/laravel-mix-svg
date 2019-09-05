@@ -3,23 +3,38 @@
 let mix = require("laravel-mix");
 let fs = require("fs");
 
-function writeJavascript(file, icons, defaultClass) {
+function output(name, attributes) {}
+
+function writeJavascript(file, icons = {}, defaultClass = "") {
   fs.writeFileSync(
     file,
     `
-    const icons = {
-      ${icons}
-    }
+    const icons = {${icons}}
+    const defaultClass = ${defaultClass}
 
-    const globalClass = '${defaultClass}';
+    module.exports = (name, attributes = '') => {
+      var replacement = "<svg ";
 
-    module.exports = (name, classes = '') => {
       if (!icons[name]) {
         console.error('Failed to load SVG ' + name);
-        return '';
+        return;
       }
 
-      return icons[name].replace('<svg ', '<svg class="' + globalClass + ' ' + classes + '"');
+      if (typeof attributes === "object") {
+          for (let property in attributes) {
+              if (attributes.hasOwnProperty(property)) {
+                  let value = typeof attributes[property] == 'string'
+                      ? attributes[property]
+                      : JSON.stringify(attributes[property]);
+
+                  replacement += property + "='" + value + "' ";
+              }
+          }
+      } else {
+          replacement += 'class="' + defaultClass + " " + attributes + '" ';
+      }
+
+      return icons[name].replace('<svg ', replacement);
     };
   `
   );
