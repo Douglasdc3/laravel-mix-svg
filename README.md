@@ -20,13 +20,14 @@ mix.svg();
 
 ## Usage
 
-By default it grabs any svg file from your `resources/assets/svg` folder and makes it available as the filename without extension.
+By default it grabs any svg file from `resources/assets/svg` folder (including subdirectories) and makes it available as the filename without extension.
 It creates a new file called `resources/assets/js/svg.js` that contains a single public method to render a svg method.
 
 ```javascript
 const svg = require('./svg')
 
 svg('my-thing'); // Spits out svg tag of the file my-thing.svg
+svg('other-folder/my-thing'); // Spits out svg tag of the file my-thing.svg inside the other-folder
 svg('my-thing', 'icon bg-blue'); // Adds icon & bg-blue css class to the svg.
 ```
 
