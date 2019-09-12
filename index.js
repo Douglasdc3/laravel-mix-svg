@@ -10,7 +10,7 @@ function writeJavascript(file, icons = {}, defaultClass = "") {
     file,
     `
     const icons = {${icons}}
-    const defaultClass = ${defaultClass}
+    const defaultClass = "${defaultClass}"
 
     module.exports = (name, attributes = '') => {
       var replacement = "<svg ";
@@ -74,9 +74,9 @@ class SVG {
 
     files.forEach(file => {
       if (fs.statSync(dir + file).isDirectory()) {
-        let prefix = file + "/";
+        let folder = file + "/";
 
-        filelist = this.walker(dir + prefix, filelist, prefix);
+        filelist = this.walker(dir + folder, filelist, prefix + folder);
       } else {
         if (!file.endsWith("svg")) return;
 
