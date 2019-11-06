@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/douglasdc3/larave-mix-svg.git"
+    "url": "git+https://github.com/douglasdc3/laravel-mix-svg.git"
   },
   "keywords": [
     "laravel",
@@ -19,9 +19,9 @@
   "author": "Ken Andries",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/douglasdc3/larave-mix-svg/issues"
+    "url": "https://github.com/douglasdc3/laravel-mix-svg/issues"
   },
-  "homepage": "https://github.com/douglasdc3/larave-mix-svg#readme",
+  "homepage": "https://github.com/douglasdc3/laravel-mix-svg#readme",
   "peerDependencies": {
     "laravel-mix": "^4.0.0"
   }
